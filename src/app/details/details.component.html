@@ -1,0 +1,49 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-6 mb-4 mb-md-0">
+      <div class="row mx-1">
+        <div class="col-12 mb-0">
+          <div class="shadow-mb">
+            <a href="{{ item.image }}" data-size="710x823" target="_blank">
+              <img
+                src="{{ item.image }}"
+                class="img-fluid"
+                style="width: 100%s"
+            /></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6 height">
+      <h1>{{ item.name }}</h1>
+      <h2>{{ item.brand.toUpperCase() }}</h2>
+      <div class="flex2">
+        <p class="margin">Size</p>
+        <p class="margin">Price</p>
+      </div>
+      <div class="flex">
+        <p class="margin">{{ item.size }}ml</p>
+        <p class="margin">{{ item.price }}€</p>
+      </div>
+      <div style="margin-bottom: 20px; height: 100px; overflow-y: scroll">
+        <p class="pt-1">{{ item.description }}</p>
+      </div>
+      <div class="">
+        <p class="notes">Família olfativa</p>
+        <p class="small">{{ item.notes }}</p>
+      </div>
+      <button
+        class="btn"
+        (click)="onRemoveItem(item.id)"
+        routerLinkActive="active"
+        routerLink=""
+      >
+        <fa-icon
+          [icon]="faTrashAlt"
+          [style]="{ color: 'white', border: 'white' }"
+          size="lg"
+        ></fa-icon>
+      </button>
+    </div>
+  </div>
+</div>

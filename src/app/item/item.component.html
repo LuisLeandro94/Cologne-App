@@ -1,0 +1,13 @@
+<a [routerLink]="['/details', item.id]">
+  <mat-card ng-repeat="item in items">
+    <mat-card-content>
+      <h2>{{ item.name }}</h2>
+      <h4>{{ item.brand.toUpperCase() }}</h4>
+    </mat-card-content>
+    <img src="{{ item.image }}" class="md-card-image" alt="user avatar" />
+    <mat-card-content class="price_size">
+      <p class="price">{{ item.price }}€</p>
+      <p class="size">{{ item.size }}ml</p>
+    </mat-card-content>
+  </mat-card>
+</a>

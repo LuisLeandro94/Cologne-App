@@ -1,0 +1,11 @@
+app-item {
+  display: inline-block !important;
+  width: 300px;
+  margin: 30px;
+}
+
+.md-padding {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
